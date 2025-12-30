@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from time import sleep
 from vrc_osc_utils import avatar_params
 
@@ -13,7 +13,7 @@ def run_sync(client, delay = 60.0, avatar_schema = None):
     avatar_params = AvatarParamFactory(avatar_schema)
     try:
         while True:
-            now = datetime.utcnow()
+            now = datetime.now(timezone.utc)
             print(f"Sending time... {now.hour}:{now.minute}:{now.second}")
             send_datetime(client, avatar_params, now)
             print("Time successfully sent.")
