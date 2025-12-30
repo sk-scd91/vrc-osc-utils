@@ -1,0 +1,25 @@
+## VRC OSC Utils
+
+A quick and dirty library to interact with VRChat's OSC interface. Includes the following features:
+
+- Bundle messages, created using keyword parameters.
+
+- A watch server to send time messages to your avatar.
+
+## Usage
+
+`python -m vrc_osc_utils [-h] [--port PORT] [--host HOST]
+
+options:
+  -h, --help       show this help message and exit
+  --port, -p PORT  The UDP port to send OSC messages to.
+  --host, -a HOST  The IP address to send OSC Messages to.`
+  
+`python -m vrc_osc_utils watch [--delay DELAY]
+  
+options:
+   --delay, -d DELAY  The interval delay to send the watch time.`
+
+## License
+
+This library is distributed under the MIT License. See `LICENSE` for more info.
